@@ -3,12 +3,11 @@
 'use strict';
 
 var yargs = require('yargs')
-	, path = require('path')
 	, Pasquale = require('pasquale')
 	, path = require('path')
 	, jsonReporter = require('../src/reporter-json')
 	, config = require('../src/config')
-	, dictmanager = require('../src/dictmanager')
+	, dictmanager = require('dictmanager')
 	, cfg = config.load(path.resolve(__dirname, '../.pasqualerc'))
 	, argv = null
 	, pasquale = null

@@ -2,10 +2,10 @@
  * Example of a question using readline.
  */
 
-var Pasquale = require('../src/main');
+var Pasquale = require('pasquale');
 var path = require('path');
 var pasquale = new Pasquale();
-var dictmanager = require('../src/dictmanager');
+var dictmanager = require('dictmanager');
 
 // console.log(
 //  dictmanager.getAvaibleLanguages(

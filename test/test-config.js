@@ -20,15 +20,6 @@ describe('config,', function () {
       });
     });
 
-    describe('regarding getting lang from name', function () {
-      it('should get a valid one', function () {
-        assert(config.isValidLang('Polish'));
-      });
-
-      it('should not get an invalid one', function  () {
-        assert(!config.isValidLang('Errado'));
-      });
-    });
   });
 
   describe('regarding changing the cfg file,', function () {

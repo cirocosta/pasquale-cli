@@ -12,5 +12,22 @@
   "bugs": {
     "url": "https://github.com/cirocosta/pasquale-cli/issues"
   },
-  "homepage": "https://github.com/cirocosta/pasquale-cli"
+  "homepage": "https://github.com/cirocosta/pasquale-cli",
+  "bin": {
+    "pasquale": "pasquale"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "dependencies": {
+    "dictmanager": "0.0.1",
+    "pasquale": "0.0.5",
+    "yargs": "^1.3.1"
+  },
+  "devDependencies": {
+    "mocha": "^1.21.3"
+  }
 }

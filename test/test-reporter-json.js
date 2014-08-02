@@ -1,6 +1,6 @@
 var reporter = require('../src/reporter-json')
   , assert = require('assert')
-  , Pasquale = require('../src/main');
+  , Pasquale = require('pasquale');
 
 describe('JsonReporter', function () {
   it('should be defined', function () {

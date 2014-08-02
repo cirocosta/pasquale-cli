@@ -3,7 +3,8 @@
  * Deals with the config file
  */
 
-var langMapping = require('./lang-mapping')
+var dictmanager = require('dictmanager')
+  , path = require('path')
   , fs = require('fs');
 
 function Config () {}
@@ -12,15 +13,23 @@ Config.prototype.isValidLang = function(lang) {
   /**
    * @todo use the dictmanager for this.
    */
-  for (var index in langMapping)
-    if (index === lang || langMapping[index].dic.replace('.dic', '') === lang) {
-      var result = {};
-      result[index] = langMapping[index];
+  // for (var index in langMapping)
+  //   if (index === lang || langMapping[index].dic.replace('.dic', '') === lang) {
+  //     var result = {};
+  //     result[index] = langMapping[index];
 
-      return result;
-    }
+  //     return result;
+  //   }
+  var result = {};
+  var dir = path.resolve(__dirname, '../dicts');
 
-  return false;
+  try {
+    result[lang] = dictmanager.resolve(lang, dir);
+  } catch (err) {
+    return false;
+  }
+
+  return result;
 };
 
 /**
