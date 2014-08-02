@@ -1,8 +1,7 @@
 {
   "name": "pasquale-cli",
   "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "CLI for Pasquale module",
   "repository": {
     "type": "git",
     "url": "https://github.com/cirocosta/pasquale-cli.git"
